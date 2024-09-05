@@ -53,7 +53,7 @@ class Form {
 
 	fieldHandler(field) {
 
-		console.log(field);
+		// console.log(field);
 
 		let params = {
 			field
@@ -193,7 +193,6 @@ class Form {
 
 		let self = this;
 		let url = "https://jsonplaceholder.typicode.com/users"; // сервис для тектирования запросов на бэкенд
-		let result = { error:true, message:'', user:false};
 
 		/*fetch(url, { // пример fetch POST запроса на сервер, где находиться PHP файл обработчик
 			method:"POST",
@@ -207,15 +206,15 @@ class Form {
 		fetch(url + '?email=' + data.email)
 		.then((response) => response.json())
 		.then((data) => {
-			// console.log(data);					
-			if(data.error){ // пользователь не найден
-				self.initBlocks(data.error); 
+			console.log(data);					
+			if(data.length == 0){ // пользователь не найден
+				self.initBlocks(true); 
 			}
 			else{ // пользователь авторизован
 				
-				result.user = data[0];
+				let user = data[0];
 
-				localStorage.setItem("email", result.user.email);
+				localStorage.setItem("email", user.email);
 				localStorage.setItem("auth", 1);
 				self.initBlocks(false); 
 			}
