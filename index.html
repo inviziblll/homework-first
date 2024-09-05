@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Auth form</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/form.js"></script>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <form id="form-block">
+            <h2 class="title">Форма авторизации</h2>
+
+            <p class="attention">Введите для тестирования формы авторизации email: Sincere@april.biz и произвольный пароль который  должен быть раваен или болше 8 символам.</p>
+            
+            <div id="error-block"></div>
+            
+            <div class="field">
+                <label for="email" class="label">Email</label>
+                <input type="text" id="email" name="email"class="input">
+                <span class="error-message"></span>
+            </div>
+
+
+            <div class="field">
+                <label for="password" class="label">Пароль</label>
+                <input type="password" id="password" name="password" class="input">
+                <span class="error-message"></span>
+            </div>
+
+            <div id="user-block">
+                <p class="title">Добро пожаловать</p>
+                <p class="title" id="auth-user-email"></p>
+            </div>
+
+            <button class="button" type="submit" id="login">Войти</button>
+            <button class="button" type="button" id="logout">Выйти</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
