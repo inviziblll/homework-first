@@ -231,12 +231,6 @@ const formBlock = document.getElementById("form-block");
 if (formBlock) {
 	const fields = ["email", "password"];
 	const authForm = new Form(formBlock, fields);
-
-
-	document.getElementById("test-fetch").addEventListener("click", (e) => {
-		authForm.fetchTest();
-	});
-
 }
 
  
